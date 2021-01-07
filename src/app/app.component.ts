@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   countdownFinished(){
-
+    console.log("countdown has finished");
   }
 
 }
