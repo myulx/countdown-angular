@@ -56,6 +56,7 @@ export class CountdownComponent implements OnInit, OnDestroy, OnChanges {
 
     if(this.counter == 0){
       this.onComplete.emit();
+      console.log("counter end");
 
     }
     else{
