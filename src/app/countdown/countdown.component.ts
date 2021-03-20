@@ -52,7 +52,7 @@ export class CountdownComponent implements OnInit, OnDestroy, OnChanges {
 
   processCountdown(){
     this.onDecrease.emit(this.counter);
-
+    console.log("count is ", this.counter);
 
     if(this.counter == 0){
       this.onComplete.emit();
