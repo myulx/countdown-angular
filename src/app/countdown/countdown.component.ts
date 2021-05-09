@@ -40,7 +40,7 @@ export class CountdownComponent implements OnInit, OnDestroy, OnChanges {
     this.countdownTimerRef = setTimeout(()=>{
       this.counter = this.counter -1;
       this.processCountdown();
-    }, 2000);
+    }, 1000);
   }
 
   private clearTimeout(){
@@ -52,12 +52,11 @@ export class CountdownComponent implements OnInit, OnDestroy, OnChanges {
 
   processCountdown(){
     this.onDecrease.emit(this.counter);
-
+    console.log("count is ", this.counter);
 
     if(this.counter == 0){
       this.onComplete.emit();
-
-
+      console.log("--counter end--");
     }
     else{
       this.doCountdown();
